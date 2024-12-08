@@ -4,6 +4,17 @@ class Calculator {
   //Informar um deadLine
 
   List<int> calculateFibonacciSequenceWithRecursivityUpTo(int deadLine) {
+    return FibonacciCalculator().calculateFibonacciSequenceUpTo(deadLine);
+  }
+
+  double imc(double weight, double height) {
+    double imc = weight / (height * height);
+    return double.parse(imc.toStringAsFixed(2));
+  }
+}
+
+class FibonacciCalculator {
+  List<int> calculateFibonacciSequenceUpTo(int deadLine) {
     List<int> fibonacciSequence = [];
     int i = 0;
     while (true) {

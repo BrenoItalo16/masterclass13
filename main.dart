@@ -1,11 +1,16 @@
+import 'calculator.dart';
 import 'person.dart';
 
 void main() {
-  Person breno = Person();
+  // Instancia uma pessoa
+  Calculator calculator = Calculator();
+  // Instancia uma pessoa
+  Person breno = Person('Breno', 'Silva', '123.456.789-00', calculator);
 
-  //Calculando IMC
-  print('IMC: ${breno.imc(84, 1.74)}');
-  //Retornando sequencia fibonacci até o número informado
+  // A pessoa usa Calculadora e chama IMC
+  print('IMC: ${breno.useCalculator.imc(84, 1.74)}');
+  // A pessoa usa Calculadora e chama Fibonacci
   print(
-      'Sequência fibonacci: ${breno.calculateFibonacciSequenceWithRecursivityUpTo(1000)}');
+    'Sequência fibonacci: ${breno.useCalculator.calculateFibonacciSequenceWithRecursivityUpTo(1000)}',
+  );
 }
