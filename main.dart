@@ -1,11 +1,13 @@
 import 'calculator.dart';
+import 'cpf_validator.dart';
 import 'person.dart';
 
 void main() {
   // Instancia uma pessoa
   Calculator calculator = Calculator();
+  CpfValidator cpf = CpfValidator();
   // Instancia uma pessoa
-  Person breno = Person('Breno', 'Silva', '123.456.789-00', calculator);
+  Person breno = Person('Breno', 'Italo', cpf, calculator);
 
   // A pessoa usa Calculadora e chama IMC
   print('IMC: ${breno.useCalculator.imc(84, 1.74)}');
@@ -23,4 +25,8 @@ void main() {
       group2_2: 50,
     )}',
   );
+
+  // Validar CPF
+  bool isCpfValid = breno.cpf.isValid('084.405.664-25');
+  print(isCpfValid ? 'CPF válido' : 'CPF inválido');
 }

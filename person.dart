@@ -1,9 +1,10 @@
 import 'calculator.dart';
+import 'cpf_validator.dart';
 
 class Person {
   final String name;
   final String lastName;
-  final String cpf;
+  final CpfValidator cpf;
   final Calculator useCalculator;
 
   const Person(
