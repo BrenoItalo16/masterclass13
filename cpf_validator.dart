@@ -84,10 +84,6 @@ class CpfValidator {
     //     'O primeiro valor é: $firstCheckDigit e o segundo é: $secondCheckDigit.');
 
     //FINAL
-    if (firstCheckDigit == true && secondCheckDigit == true) {
-      return true;
-    } else {
-      return false;
-    }
+    return (firstCheckDigit && secondCheckDigit);
   }
 }
