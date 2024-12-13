@@ -56,10 +56,6 @@ class CreditCardValidatorJacob {
     int substractRest = 10 - rest;
 
     //==================== RETORNO FINAL =====================
-    if (lastDigit != substractRest) {
-      return false;
-    } else {
-      return true;
-    }
+    return (lastDigit == substractRest);
   }
 }
